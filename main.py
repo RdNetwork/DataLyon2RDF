@@ -7,6 +7,7 @@ from rdf_utils import write_headers, print_comment
 DIR = os.path.dirname(__file__)                 #Output directory
 OUTFILE = os.path.join(DIR, "out/output.ttl")   #Output file
 NB_USERS = 30                                   #Number of users to be generated
+NB_TRAFFIC = 50                                   #Number of travels to be generated
 
 
 def main():
@@ -38,7 +39,7 @@ def main():
 
         print_comment(out, "Artificial SYTRAL private data: Traffic information")
         print "Writing traffic data..."
-        valids = Validation.create_traffic(50, subway_lines, users)
+        valids = Validation.create_traffic(NB_TRAFFIC, subway_lines, users)
         write_graph(out, valids, Validation.GRAPHNAME)
 
 if __name__ == "__main__":
