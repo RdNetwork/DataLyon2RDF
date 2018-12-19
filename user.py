@@ -137,7 +137,7 @@ class User(object):
 
         str_types = ["Rue", "Avenue", "Boulevard", "Route", "Place"]
 
-        return random.randint(0, 250) + " " + random.choice(str_types) + " " + random.choice(string.letters) + " " + "69XXX" + " " +  random.choice(towns)
+        return str(random.randint(0, 250)) + " " + random.choice(str_types) + " " + random.choice(string.letters).upper() + " " + "69XXX" + " " +  random.choice(towns)
 
     @staticmethod
     def random_sub():
