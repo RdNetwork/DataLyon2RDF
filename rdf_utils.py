@@ -27,6 +27,7 @@ def write_headers(out):
     out.write("@prefix tcl: 	<http://localhost/> .\n")
     out.write("@prefix gld: 	<http://data.grandlyon.com/> .\n")
     out.write("@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n")
+    out.write("@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .\n")
     out.write("@prefix gtfs: 	<http://vocab.gtfs.org/terms#> .\n\n")
 
 

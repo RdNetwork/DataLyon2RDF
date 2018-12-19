@@ -40,7 +40,7 @@ class User(object):
             out.write("\t\t];\n")
         write_rdf_prop(out, 2, "foaf:givenName", '"'+self.name+'"', False)
         write_rdf_prop(out, 2, "foaf:familyName", '"'+self.surname+'"', False)
-        write_rdf_prop(out, 2, "foaf:address", '"'+self.address+'"', False)
+        write_rdf_prop(out, 2, "vcard:hasAddress", '"'+self.address+'"', False)
         write_rdf_prop(out, 2, "tcl:birthday", '"'+self.birthdate+'"^^xsd:dateTime', True)
 
     @staticmethod
