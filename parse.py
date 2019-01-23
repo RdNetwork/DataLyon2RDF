@@ -11,10 +11,10 @@ DIR = os.path.dirname(__file__)
 
 def write_graph(out, instances, graph_name):
     """Writing all instances of an object collection in an output RDF file."""
-    out.write(graph_name + " {\n")
+    #out.write(graph_name + " {\n")
     for instance in instances:
         instance.print_rdf(out, graph_name)
-    out.write("}\n\n")
+    #out.write("}\n\n")
 
 # Worship methods
 def parse_worships():
