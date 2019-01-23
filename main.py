@@ -4,14 +4,16 @@ import os
 from parse import *
 from rdf_utils import write_headers, print_comment
 
-DIR = os.path.dirname(__file__)                 #Output directory
+DIR = os.path.dirname(__file__)                 #Root directory
 OUTFILE = os.path.join(DIR, "out/output.ttl")   #Output file
 NB_USERS = 30                                   #Number of users to be generated
-NB_TRAFFIC = 50                                   #Number of travels to be generated
+NB_TRAFFIC = 50                                 #Number of travels to be generated
 
 
 def main():
     """Main process function."""
+    if not os.path.exists(os.path.join(DIR, "out")):
+        os.makedirs(os.path.join(DIR, "out"))
 
     with open(OUTFILE, "w+") as out:
         print "Writing RDF prefixes..."
